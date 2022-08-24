@@ -71,7 +71,6 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-// let test = [2, 15, 7, 9, 45];
 function fizzBuzz(aryOfNumbers) {
   let result = [];
   
@@ -87,14 +86,33 @@ function fizzBuzz(aryOfNumbers) {
   
   return result;
 }
-// fizzBuzz(test);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+function encode(sentence) {
+  let code = sentence.split(''),result = '';
+    for (let index in code){
+        if(code[index] === 'a') code[index] = 1;
+        if(code[index] === 'e') code[index] = 2;
+        if(code[index] === 'i') code[index] = 3;
+        if(code[index] === 'o') code[index] = 4;
+        if(code[index] === 'u') code[index] = 5;
+    }
+    result = code.join('');
+  return result;
 }
-function decode() {
-  // seu código aqui
+
+function decode(decipher) {
+  let uncode = decipher.split(''),result2 = '';
+    for (let index in uncode){
+        if(uncode[index] === '1') uncode[index] = 'a';
+        if(uncode[index] === '2') uncode[index] = 'e';
+        if(uncode[index] === '3') uncode[index] = 'i';
+        if(uncode[index] === '4') uncode[index] = 'o';
+        if(uncode[index] === '5') uncode[index] = 'u';
+    }
+    result2 = uncode.join('');
+  return result2;
 }
 
 // Desafio 10
