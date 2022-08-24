@@ -27,7 +27,7 @@ function footballPoints(wins,ties) {
 
 // Desafio 6
 function checkHighestNumber(arrayOfNumbers){ //Encontra o maior valor no array
-  let compare = arrayOfNumbers[0];
+  let compare = arrayOfNumbers[0]; // iniciado com o primeiro valor do array pra não ter problema com negativos.
   
   for (let index in arrayOfNumbers){
      if (arrayOfNumbers[index] > compare){
@@ -43,7 +43,7 @@ function checkHighestNumber(arrayOfNumbers){ //Encontra o maior valor no array
   }
 }
 
-function highestCount(arrayOfNumbers) {
+function highestCount(arrayOfNumbers) { // Conta e devolve os hits.
   checkHighestNumber(arrayOfNumbers);
   let compare = arrayOfNumbers[checkHighestNumber(arrayOfNumbers)], hits = 0;
   
