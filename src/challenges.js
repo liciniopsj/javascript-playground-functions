@@ -116,10 +116,28 @@ function decode(decipher) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(ary, aString) {
+  let objAry = [], aryAux = [];
+  aryAux = ary.sort();
 
+  if (ary.length === 0) return 'Vazio!';
+  
+  for (let index in aryAux){
+    objAry.push(
+      {
+        tech: aryAux[index],
+        name: aString
+      },
+    
+    )
+  }
+
+
+  return objAry;
+}
+// let techary = ['CSS', 'HTML', 'React'];
+// let umNome = 'bolas';
+// techList(techary, umNome);
 module.exports = {
   calcArea,
   catAndMouse,
