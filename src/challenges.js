@@ -20,13 +20,40 @@ function concatName(arrayOfStrings) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  let result = (wins * 3) + ties;
+  return result;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function checkHighestNumber(arrayOfNumbers){ //Encontra o maior valor no array
+  let compare = arrayOfNumbers[0];
+  
+  for (let index in arrayOfNumbers){
+     if (arrayOfNumbers[index] > compare){
+      compare = arrayOfNumbers[index];
+     }
+  
+  }
+  
+  for (let index in arrayOfNumbers){
+      if (compare === arrayOfNumbers[index]){
+          return index;
+      }
+  }
+}
+
+function highestCount(arrayOfNumbers) {
+  checkHighestNumber(arrayOfNumbers);
+  let compare = arrayOfNumbers[checkHighestNumber(arrayOfNumbers)], hits = 0;
+  
+  for (let index in arrayOfNumbers){
+    if (compare === arrayOfNumbers[index]){
+      hits += 1;
+    }
+  }
+
+  return hits;
 }
 
 // Desafio 7
