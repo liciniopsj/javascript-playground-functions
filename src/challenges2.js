@@ -15,14 +15,13 @@ function hydrate(inString) {
   let numberAry = numStringAry.map(Number); // convert to number
   let sumResult = 0;
 
-  for (let sum of numberAry){
+  for (let sum of numberAry) {
     sumResult += sum;
   }
-  if (sumResult === 1) return 1 + ' copo de água';
-  return sumResult + ' copos de água'
-  
+  if (sumResult === 1) return `1 copo de água`;
+  return `${sumResult} copos de água`;
 }
-
+hydrate('1');
 module.exports = {
   generatePhoneNumber,
   hydrate,
