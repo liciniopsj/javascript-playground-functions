@@ -21,7 +21,7 @@ function hydrate(inString) {
   if (sumResult === 1) return `1 copo de água`;
   return `${sumResult} copos de água`;
 }
-hydrate('1');
+
 module.exports = {
   generatePhoneNumber,
   hydrate,
